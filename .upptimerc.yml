@@ -1,31 +1,47 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Minton's Status page (ADR-0041): the Upptime configuration the wizard
+# (`scripts/status-page-wizard.sh`) copies into the public status repository
+# `HanfiroBoy/minton-status`. Edit it here, then re-run the wizard's config
+# stage (or copy and push it by hand) so the two never drift.
+#
+# Two lines, no more (ADR-0041): App and Sign-in, the two things that stop a
+# club night. Each probes an endpoint that proves what the line claims.
+owner: HanfiroBoy
+repo: minton-status
+user-agent: HanfiroBoy
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # The desk can read its data: one read against the SQLite file on the volume.
+  - name: App
+    url: https://app.minton.net.nz/healthz/store
+    expectedStatusCodes: [200]
+    # Degraded above this, not down: the runner is in the US and the Machine in Sydney.
+    maxResponseTime: 5000
+  # Organisers can sign in: Clerk answers us, asked at most once a minute.
+  - name: Sign-in
+    url: https://app.minton.net.nz/healthz/signin
+    expectedStatusCodes: [200]
+    maxResponseTime: 5000
+
+# Who is assigned each outage issue: the Operator.
+assignees:
+  - HanfiroBoy
+
+# Keep short outage issues: a 3-minute blip on club night is still worth seeing.
+skipDeleteIssues: true
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.minton.net.nz
+  name: Minton status
+  introTitle: '**Minton** status'
+  introMessage: 'Is Minton down, or is it you? **App** is the desk and the board reading their data; **Sign-in** is Organisers logging in. Each is checked every five minutes. Planned maintenance and outages are posted below.'
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Minton
+      href: https://minton.net.nz
+    - title: Help
+      href: https://minton.net.nz/help
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Every 5 minutes is Upptime's default; it is free on a public repository.
+workflowSchedule:
+  uptime: '*/5 * * * *'
