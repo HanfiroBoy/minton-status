@@ -5,11 +5,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.minton.net.nz.ico",
     "slug": "app",
     "status": "down",
-    "uptime": "40.72%",
-    "uptimeDay": "40.72%",
-    "uptimeWeek": "40.72%",
-    "uptimeMonth": "40.72%",
-    "uptimeYear": "40.72%",
+    "uptime": "34.87%",
+    "uptimeDay": "34.87%",
+    "uptimeWeek": "34.87%",
+    "uptimeMonth": "34.87%",
+    "uptimeYear": "34.87%",
     "time": 511,
     "timeDay": 511,
     "timeWeek": 511,
@@ -25,16 +25,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.minton.net.nz.ico",
     "slug": "sign-in",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "58.45%",
+    "uptimeDay": "58.45%",
+    "uptimeWeek": "58.45%",
+    "uptimeMonth": "58.45%",
+    "uptimeYear": "58.45%",
     "time": 302,
     "timeDay": 302,
     "timeWeek": 302,
     "timeMonth": 302,
     "timeYear": 302,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-10-02": 0
+    }
   }
 ]
