@@ -1,7 +1,7 @@
 url: https://app.minton.net.nz/healthz/signin
-status: down
-code: 404
-responseTime: 422
-lastUpdated: 2026-10-03T01:43:13.284Z
+status: up
+code: 200
+responseTime: 1266
+lastUpdated: 2026-10-03T08:12:21.360Z
 startTime: 2026-10-02T09:01:33.131Z
 generator: Upptime <https://github.com/upptime/upptime>
