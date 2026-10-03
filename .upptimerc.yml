@@ -21,9 +21,6 @@ sites:
     url: https://app.minton.net.nz/healthz/signin
     expectedStatusCodes: [200]
     maxResponseTime: 5000
-  - name: Alert test
-    url: https://app.minton.net.nz/healthz
-    expectedStatusCodes: [200]
 
 # Who is assigned each outage issue: the Operator.
 assignees:
