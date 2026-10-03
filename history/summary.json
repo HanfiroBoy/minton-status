@@ -6,7 +6,7 @@
     "slug": "app",
     "status": "up",
     "uptime": "8.00%",
-    "uptimeDay": "8.38%",
+    "uptimeDay": "8.39%",
     "uptimeWeek": "8.00%",
     "uptimeMonth": "8.00%",
     "uptimeYear": "8.00%",
@@ -47,16 +47,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.minton.net.nz.ico",
     "slug": "alert-test",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "57.93%",
+    "uptimeDay": "57.93%",
+    "uptimeWeek": "57.93%",
+    "uptimeMonth": "57.93%",
+    "uptimeYear": "57.93%",
     "time": 401,
     "timeDay": 401,
     "timeWeek": 401,
     "timeMonth": 401,
     "timeYear": 401,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-10-03": 0
+    }
   }
 ]
